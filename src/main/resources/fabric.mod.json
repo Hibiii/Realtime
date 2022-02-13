@@ -17,7 +17,11 @@
     "icon": "assets/modid/icon.png",
 
     "environment": "*",
-    "entrypoints": {},
+    "entrypoints": {
+        "modmenu": [
+            "hibi.realtime.MenuInteg"
+        ]
+    },
     "mixins": [
         "modid.mixins.json"
     ],

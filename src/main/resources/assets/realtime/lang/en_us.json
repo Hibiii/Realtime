@@ -1,0 +1,8 @@
+{
+    "realtime.config.title": "Realtime Options",
+    "realtime.config.enabled": "Enabled",
+    "realtime.config.sync_sun_times": "Synchronize sun times",
+    "realtime.config.sync_sun_times.tooltip.1": "With this option enabled, the sun will rise and",
+    "realtime.config.sync_sun_times.tooltip.2": "set the exact same time as the real life sun.",
+    "realtime.config.tooltip.internet": "This feature connects to the internet."
+}
