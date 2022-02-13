@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import hibi.realtime.Common;
+import hibi.realtime.Config;
 import net.minecraft.client.world.ClientWorld;
 
 @Mixin(ClientWorld.class)
@@ -22,7 +23,9 @@ public class ClientWorldMixin {
 		cancellable = true
 	)
 	private void setTimeInject(long junk, CallbackInfo info) {
-		this.clientWorldProperties.setTimeOfDay(Common.gameTimeNow());
-		info.cancel();
+		if(Config.enabled) {
+			this.clientWorldProperties.setTimeOfDay(Common.gameTimeNow());
+			info.cancel();
+		}
 	}
 }
